@@ -77,13 +77,15 @@ Then put this in your code:
     - `author`:
         optional, if each book author is different, you can fill it.
     - `data`:
-        required, HTML String of the chapter content. image paths should be absolute path (should start with "http" or "https"), so that they could be downloaded. With the upgrade is possible to use local images (for this the path 	must start with file: //)
+        [ORIGINAL: required, FORKED: either data or filename must present], HTML String of the chapter content. image paths should be absolute path (should start with "http" or "https"), so that they could be downloaded. With the upgrade is possible to use local images (for this the path 	must start with file: //)
     - `excludeFromToc`:
         optional, if is not shown on Table of content, default: false;
     - `beforeToc`:
         optional, if is shown before Table of content, such like copyright pages. default: false;
     - `filename`:
-        optional, specify filename for each chapter, default: undefined;
+        [ORIGINAL: optional, FORKED: either data or filename must present] optional, specify filename for each chapter, default: undefined;
+        absolute path to a local file, containing chapter content. Images can be http/file urls or just relative(to the chapter file) paths.
+
 - `verbose`:
     specify whether or not to console.log progress messages, default: false.
 
